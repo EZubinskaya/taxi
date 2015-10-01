@@ -1,0 +1,70 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : Taxi:dao : dao.war">
+    <output-path>$PROJECT_DIR$/out/artifacts/dao</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$/dao" />
+    </properties>
+    <root id="archive" name="dao.war">
+      <element id="javaee-facet-resources" facet="dao/web/Web Gradle : dao.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="dao" />
+          <element id="dir-copy" path="$PROJECT_DIR$/dao/build/resources/main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="Taxi-models-unspecified.jar">
+            <element id="module-output" name="models" />
+            <element id="dir-copy" path="$PROJECT_DIR$/models/build/resources/main" />
+          </element>
+          <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-jpa:1.3.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: cglib:cglib-nodep:2.2.2" />
+          <element id="library" level="project" name="Gradle: org.aspectj:aspectjweaver:1.6.12" />
+          <element id="library" level="project" name="Gradle: org.hibernate:hibernate-entitymanager:4.1.5.SP1" />
+          <element id="library" level="project" name="Gradle: org.hibernate:hibernate-core:4.1.5.SP1" />
+          <element id="library" level="project" name="Gradle: org.hibernate:hibernate-validator:4.3.0.Final" />
+          <element id="library" level="project" name="Gradle: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final" />
+          <element id="library" level="project" name="Gradle: mysql:mysql-connector-java:5.0.8" />
+          <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-commons:1.5.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.slf4j:jcl-over-slf4j:1.7.1" />
+          <element id="library" level="project" name="Gradle: org.jboss.logging:jboss-logging:3.1.0.GA" />
+          <element id="library" level="project" name="Gradle: org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec:1.0.0.Final" />
+          <element id="library" level="project" name="Gradle: dom4j:dom4j:1.6.1" />
+          <element id="library" level="project" name="Gradle: org.javassist:javassist:3.15.0-GA" />
+          <element id="library" level="project" name="Gradle: org.hibernate.common:hibernate-commons-annotations:4.0.1.Final" />
+          <element id="library" level="project" name="Gradle: antlr:antlr:2.7.7" />
+          <element id="library" level="project" name="Gradle: javax.validation:validation-api:1.0.0.GA" />
+          <element id="library" level="project" name="Gradle: org.aspectj:aspectjrt:1.7.1" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.1.2" />
+          <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-mapper-asl:1.9.0" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.1.1" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.1.1" />
+          <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-core-asl:1.9.0" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.2.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-oxm:4.2.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:4.2.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-jdbc:4.2.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-tx:4.2.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-orm:4.2.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:4.2.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:4.2.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:4.2.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:4.2.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:4.2.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.json:json:20090211" />
+          <element id="library" level="project" name="Gradle: com.google.guava:guava:r05" />
+          <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-core:3.2.3.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-web:3.2.3.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-config:3.2.3.RELEASE" />
+          <element id="library" level="project" name="Gradle: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.5" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-log4j12:1.7.5" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/dao/exploded/dao.war/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

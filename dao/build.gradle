@@ -1,0 +1,77 @@
+buildscript {
+    repositories{
+        maven{
+            url = 'http://kellyrob99.github.com/Jenkins-api-tour/repository'
+        }
+    }
+    dependencies {
+        classpath 'org.kar:gradle-jslint-plugin:0.2'
+    }
+}
+
+apply plugin: "war"
+apply plugin: "jacoco"
+//apply plugin: "findbugs"
+apply plugin: "pmd"
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination "${buildDir}/jacocoHtml"
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+apply plugin: 'jslint'
+
+compileJava {
+    sourceCompatibility = '1.7'
+}
+
+jslint {
+    inputDirs = ['src/main/webapp/resources/app/']
+    haltOnFailure = false
+    excludes = '**/assets/'
+    options = 'rhino'
+    formatterType = 'html'
+}
+
+ext.springVersion='4.2.1.RELEASE'
+ext.springSecurityVersion = '3.2.3.RELEASE'
+
+dependencies {
+    compile project(":models")
+
+    compile "org.json:json:20090211"
+    compile "com.google.guava:guava:r05"
+
+    compile "org.springframework.security:spring-security-core:$springSecurityVersion"
+    compile "org.springframework.security:spring-security-web:$springSecurityVersion"
+    compile "org.springframework.security:spring-security-config:$springSecurityVersion"
+
+    compile 'log4j:log4j:1.2.17'
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile 'org.slf4j:slf4j-log4j12:1.7.5'
+    testCompile "junit:junit:4.11"
+    testCompile 'org.mockito:mockito-all:1.10.19'
+
+
+}
+
+//findbugs {
+//    ignoreFailures = true
+//}
+
+pmd {
+    ignoreFailures = true
+}
+
+//checkstyle {
+//    ignoreFailures = true
+//}

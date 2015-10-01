@@ -1,0 +1,144 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Sort and Filter</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <style>
+    body {
+        padding-top: 50px;
+    }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-app="sortApp" ng-controller="mainController">
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <td>
+                        Price
+                    </td>
+                    <td>
+                        Car Registration
+                    </td>
+                    <td colspan="3">
+                        Estimation Time
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="person in persons">
+                    <td ng-bind: "person.name">{{ person.name }}</td>
+                    <td ng-bind: "person.age">{{ person.age }}</td>
+                    <td ng-bind: "person.bday">{{ person.bday }}</td>
+                    <td>
+                        <input type="button" ng-click="edit(person,persons,indexOf(person))" value="edit" />
+                    </td>
+                    <td>
+                        <input type="button" ng-click="del(indexOf(person))" value="delete" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-bordered table-striped">
+            <tbody>
+                <!-- This table is to enter data-->
+                <tr>
+                    <td>Enter Name: </td>
+                    <td>
+                        <input type="text" ng-model="name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter Age: </td>
+                    <td>
+                        <input type="text" ng-model="age" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter Birth Day: </td>
+                    <td>
+                        <input type="text" ng-model="bday" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" ng-click="btnclk()" value="Save" />
+                    </td>
+                    <td>
+                        <input type="button" ng-click="btnupd(name,age,bday)" value="Update" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+    angular.module('sortApp', [])
+
+
+
+        $scope.persons = [{
+            name: 'Seif',
+            age: '15',
+            bday: 2
+        }, {
+            name: 'Zied',
+            age: '14',
+            bday: 4
+        }, {
+            name: 'Meriem',
+            age: '17',
+            bday: 7
+        }, {
+            name: 'Jaber',
+            age: '2',
+            bday: 6
+        }];
+
+        $scope.del = function(index) {
+            $scope.persons.splice(index, 1);
+        };
+        $scope.btnclk = function() {
+            if (!$scope.name) {
+                alert("Enter Name");
+            } else if (!$scope.age) {
+                alert("Enter Age");
+            } else if (!$scope.bday) {
+                alert("Enter Birth Day");
+            } else {
+                $scope.persons.push({
+                    'name': $scope.name,
+                    'age': $scope.age,
+                    'bday': $scope.bday
+                });
+                $scope.name = '';
+                $scope.age = '';
+                $scope.bday = '';
+            }
+        };
+        var key;
+        $scope.edit = function(person, index) {
+            key = index;
+            $scope.name = person.name;
+            $scope.age = person.age;
+            $scope.bday = person.bday;
+
+        };
+        $scope.btnupd = function(name, age, bday) {
+            $scope.persons[key].name = name;
+            $scope.persons[key].age = age;
+            $scope.persons[key].bday = bday;
+            $scope.name = '';
+            $scope.age = '';
+            $scope.bday = '';
+
+        };
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" ng-app="manager">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager</title>
+    <link rel="stylesheet" href="resources/css/manager.css"/>
+    <link rel="stylesheet" href="resources/css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css"/>
+</head>
+<body ng-controller="managerController" data-ng-init="init()">
+
+<table class="table table-striped table-condensed" >
+    <thead>
+    <tr>
+        <th style="min-width: 80px;">Order_id</th>
+        <th style="min-width: 80px;">Price</th>
+        <th style="min-width: 80px;">Car registration number</th>
+        <th style="min-width: 80px;">Estimation Time</th>
+        <th style="min-width: 80px;">Status</th>
+        <th style="min-width: 80px;">Phone</th>
+        <th style="width:20px;">&nbsp;</th>
+        <th style="width:20px;">&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="order in listOrder">
+        <td>{{ order.order_id }}</td>
+        <td>{{ order.price }}</td>
+        <td>{{ order.carRegistrationSign }}</td>
+        <td>{{ order.estimationTime }}</td>
+        <td>{{ order.status }}</td>
+        <td>{{ order.phone }}</td>
+        <td><a ng-click="editOrder(order.order_id)" class="btn btn-small btn-primary">edit</a></td>
+        <td><a ng-click="deleteOrder(order.order_id)" class="btn btn-small btn-danger">delete</a></td>
+    </tr>
+    </tbody>
+</table>
+
+<table class="table table-striped table-condensed">
+    <tr>
+        <td style="min-width: 80px;">Price</td>
+        <td><input type="text" ng-model="price"></td>
+    </tr>
+    <tr>
+        <td style="min-width: 80px;">Car Registration Sign</td>
+        <td><input type="text" ng-model="carRegistrationSign"></td>
+    </tr>
+    <tr>
+        <td style="min-width: 80px;">Estimation Time</td>
+        <td><input type="text" ng-model="estimationTime"></td>
+    </tr>
+    <tr>
+        <td style="min-width: 80px;">Status</td>
+        <td><input type="text" ng-model="status"></td>
+    </tr>
+    <tr>
+        <td style="min-width: 80px;">Phone</td>
+        <td><input type="text" ng-model="phone"></td>
+    </tr>
+    <td><a ng-click="save()" class="btn btn-small btn-primary">save</a></td>
+    <td><a ng-click="update()" class="btn btn-small btn-danger">update</a></td>
+</table>
+
+<script src="resources/js/jquery.js"></script>
+<script src="resources/js/bootstrap.js"></script>
+<script src="resources/js/angular.js"></script>
+<script src="resources/js/angular-resource.js"></script>
+<script src="resources/js/manager/manager.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>AngularJs</title>
+ <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+<body ng-app="CrudApp">
+<h2>Users</h2>
+<div ng-controller="ListCtrl">
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in users" ng-class="{ editing: user == editedTodo}">
+        <div class="view">
+        <td> 
+              <form ng-submit="doneEditing(user)">
+                  <input class="edit" ng-trim="false" ng-model="user.username" user-escape="revertEditing(todo)" ng-blur="doneEditing(user)" user-focus="user == editedTodo">
+              </form>
+              <style>
+                  input.edit{
+                      border: 1px solid transparent;
+                  }
+                  input.edit:focus{
+                      border-color: #000;
+                  }
+                  </style>
+        </td>
+      <td>{{user.first_name}}</td>
+      <td>{{user.last_name}}</td>
+      <td>{{user.address}}</td>
+       <td><a ng-click="deleteUser(user.id)" class="btn btn-small btn-danger">delete</a></td>
+        </div>
+    </tr>
+  </tbody>
+</table>
+<div ng-show="show">
+<form novalidate name="AddNewForm" id="add-new-form" method="post" action="">
+  <label for="username">Username:</label>
+  <input type="text" ng-model="user.username" required />
+  <label for="first_name">First name:</label>
+  <input type="text" ng-model="user.first_name" required />
+  <label for="last_name">Last name:</label>
+  <input type="text" ng-model="user.last_name" required />
+  <label for="address">Address:</label>
+  <input type="text" ng-model="user.address" />
+  <br/>
+  <button class="btn btn-primary" ng-disabled="AddNewForm.$invalid || isUnchanged(user)" id="add-new-btn" ng-click="add_new(user)">Save!</button>
+  <a href="#/" class="btn" ng-click="show=!show">Cancel</a>
+</form>
+</div>
+ <button  class="btn btn-pimary" ng-click="show=!show">Add New User</button>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-route.js"></script>
+<script type="text/javascript" src ="app.js"></script>
+</body>
+</html>

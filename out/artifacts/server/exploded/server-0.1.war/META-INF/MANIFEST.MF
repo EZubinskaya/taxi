@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Implementation-Title: Tomcat 8 with gradle
+Implementation-Version: 0.1
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.0" sequence="0" timestamp="1443689716535" analysisTimestamp="1443689716565" release="">
+  <Project projectName="">
+    <Jar>D:\test_taxi1\models\build\classes\test\com\UserTest.class</Jar>
+    <AuxClasspathEntry>D:\test_taxi1\models\build\classes\main</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.springframework\spring-core\4.2.1.RELEASE\97a7ff5ec8a070722d0809098a9964347130466c\spring-core-4.2.1.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.springframework\spring-oxm\4.2.1.RELEASE\327df2a0b268a838492d9a15d015f0495debf42b\spring-oxm-4.2.1.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context\4.2.1.RELEASE\5bf6dec08e77755c2ec913fde1b8e29083e70a76\spring-context-4.2.1.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.springframework.data\spring-data-jpa\1.3.0.RELEASE\a3b29dc1803c6ca08b96acb5477d45dd27a20afd\spring-data-jpa-1.3.0.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jdbc\4.2.1.RELEASE\a30e0b1e2bce0928788abb42e8bae2eb71698aeb\spring-jdbc-4.2.1.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.springframework\spring-tx\4.2.1.RELEASE\f05b4465be1aab3493e83cb529f191cb7834b222\spring-tx-4.2.1.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.springframework\spring-orm\4.2.1.RELEASE\27a2c41a6cd18aa8693c166676f3a044f9fba02f\spring-orm-4.2.1.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aop\4.2.1.RELEASE\e5e199d175497a895dcdc7e3531e32fea6fbbbee\spring-aop-4.2.1.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\4.2.1.RELEASE\6f8db100285e16eff3e413d2fba4f3557c09a07a\spring-webmvc-4.2.1.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\cglib\cglib-nodep\2.2.2\d456bb230c70c0b95c76fb28e429d42f275941\cglib-nodep-2.2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjweaver\1.6.12\e885e7ba80175986cfd6a84b0ce118407621f11b\aspectjweaver-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-entitymanager\4.1.5.SP1\dfa7c2bd9418a48e81666d3f0997ede0a99f0596\hibernate-entitymanager-4.1.5.SP1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-core\4.1.5.SP1\9470f032caf676d1334390c0bc0db88b37b14a46\hibernate-core-4.1.5.SP1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-validator\4.3.0.Final\f2d0447bcdb27a48398215a33eb351b8a594e3a4\hibernate-validator-4.3.0.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.0-api\1.0.1.Final\hibernate-jpa-2.0-api-1.0.1.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\mysql\mysql-connector-java\5.0.8\7b9bfb6c4e4885660378a9c13330915c321f6cca\mysql-connector-java-5.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.1.2\e9c672d2d60c966772c6271d5a61614a4259274a\jackson-databind-2.1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.codehaus.jackson\jackson-mapper-asl\1.9.0\74828722eb1127057a9522dd6a7a8e208e82b3e7\jackson-mapper-asl-1.9.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.m2\repository\junit\junit\4.11\junit-4.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.springframework\spring-beans\4.2.1.RELEASE\6d39786b9f7b2a79897a0a83495f30002d9f8de3\spring-beans-4.2.1.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.springframework\spring-expression\4.2.1.RELEASE\f6f34581b94a03bf39c5c88d1286bee76afe90a7\spring-expression-4.2.1.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.springframework.data\spring-data-commons\1.5.0.RELEASE\ef28d3ad8b1eadab15ddfc4b7a0eacfe3cc0206c\spring-data-commons-1.5.0.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.1\1a508b0ecd360507a39a4dbaedd1aa4750741f6d\slf4j-api-1.7.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.slf4j\jcl-over-slf4j\1.7.1\a11c000cf26e42ba30b7fb5bd60630a57783fe2d\jcl-over-slf4j-1.7.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.springframework\spring-web\4.2.1.RELEASE\e37e34274768989bae9470b6eaffe51e09bd1e44\spring-web-4.2.1.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.jboss.logging\jboss-logging\3.1.0.GA\c71f2856e7b60efe485db39b37a31811e6c84365\jboss-logging-3.1.0.GA.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.jboss.spec.javax.transaction\jboss-transaction-api_1.1_spec\1.0.0.Final\2ab6236535e085d86f37fd97ddfdd35c88c1a419\jboss-transaction-api_1.1_spec-1.0.0.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.javassist\javassist\3.15.0-GA\79907309ca4bb4e5e51d4086cc4179b2611358d7\javassist-3.15.0-GA.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.hibernate.common\hibernate-commons-annotations\4.0.1.Final\78bcf608d997d0529be2f4f781fdc89e801c9e88\hibernate-commons-annotations-4.0.1.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.m2\repository\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.1.1\b01cc83e745fc4425a3968fafbf8e5b8254a6dd\jackson-annotations-2.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.1.1\82ad1c5f92f6dcc6291f5c46ebacb975eaa844de\jackson-core-2.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjrt\1.7.1\e9ed47b6e3326c4a6666027978315028275ba8aa\aspectjrt-1.7.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\kzub\.gradle\caches\modules-2\files-2.1\org.codehaus.jackson\jackson-core-asl\1.9.0\194599ab3dd29b63b763e7635c8d7a63c830f058\jackson-core-asl-1.9.0.jar</AuxClasspathEntry>
+    <SrcDir>D:\test_taxi1\models\src\test\java\com\UserTest.java</SrcDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 1 Oct 2015 11:55:16 +0300" total_classes="1" referenced_classes="14" total_bugs="0" total_size="8" num_packages="1" java_version="1.7.0_79" vm_version="24.79-b02" cpu_seconds="3.06" clock_seconds="1.29" peak_mbytes="98.07" alloc_mbytes="1795.50" gc_seconds="0.02">
+    <PackageStats package="com" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="com.UserTest" sourceFile="UserTest.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="196" invocations="308" avgMicrosecondsPerInvocation="638" maxMicrosecondsPerInvocation="14335" standardDeviationMircosecondsPerInvocation="1427"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="162" invocations="309" avgMicrosecondsPerInvocation="524" maxMicrosecondsPerInvocation="28112" standardDeviationMircosecondsPerInvocation="1586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="65" invocations="14" avgMicrosecondsPerInvocation="4690" maxMicrosecondsPerInvocation="13360" standardDeviationMircosecondsPerInvocation="5281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="47" invocations="54" avgMicrosecondsPerInvocation="887" maxMicrosecondsPerInvocation="5278" standardDeviationMircosecondsPerInvocation="917"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="38" invocations="277" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="1530" standardDeviationMircosecondsPerInvocation="225"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="35" invocations="2" avgMicrosecondsPerInvocation="17628" maxMicrosecondsPerInvocation="34585" standardDeviationMircosecondsPerInvocation="16956"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="25" invocations="21" avgMicrosecondsPerInvocation="1235" maxMicrosecondsPerInvocation="13458" standardDeviationMircosecondsPerInvocation="2837"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="20" invocations="14" avgMicrosecondsPerInvocation="1497" maxMicrosecondsPerInvocation="9454" standardDeviationMircosecondsPerInvocation="2403"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

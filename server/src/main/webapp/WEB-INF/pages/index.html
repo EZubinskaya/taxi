@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mymodal">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Found taxi for you</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="resources/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="resources/css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <script>
+    document.write('<base href="' + document.location + '" />');
+    </script>
+    <!-- jQuery -->
+    <script src="resources/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="resources/js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="resources/js/grayscale.js"></script>
+    <script src="resources/js/angular.js"></script>
+    <script src="resources/js/angular-route.js"></script>
+    <script src="resources/js/angular-animate.min.js"></script>
+    <script src="resources/js/ui-bootstrap.js"></script>
+    <script src="resources/js/login/login.js"></script>
+    <script src="resources/js/ngSweetAlert.js"></script>
+    <script src="resources/js/sweet-alert.min.js"></script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#acquaintance">Acquaintance</a>
+                </li>
+                <li>
+                    <span ng-controller="MainCtrl" class="container ">
+                      <a class="page-login " href="#login" ng-click="toggleModal()">Login</a>
+                      <modal title="Login form" visible="showModal">
+                          <form role="form" data-ng-submit="submit()" data-ng-controller="LoginSubmitController">
+                              <div class="form-group">
+                                  <label for="email">Email address</label>
+                                  <input type="email" class="form-control" id="email" placeholder="Enter email" data-ng-model="email" />
+                              </div>
+                              <div class="form-group">
+                                  <label for="password">Password</label>
+                                  <input type="password" class="form-control" id="password" placeholder="Password" data-ng-model="password"/>
+                              </div>
+                              <button id="login" type="submit" class="btn btn-warning">Sign in</button>
+                          </form>
+                      </modal>
+                    </span>
+                </li>
+                <li>
+                    <a class="page-scroll" href="http://localhost:8080/server-0.1/app/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="brand-heading">We find Taxi only for You ...</h1>
+                    <p class="intro-text">Let's get acquainted. <br>So that when the taxi will arrive, we can tell you</p>
+                    <a href="#acquaintance" class="btn btn-circle page-scroll">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<span ng-controller="RegisterController" id="acquaintance">
+    <div ng-controller="NewOrderController">
+        <check-form name="userOrder" submitted="state.submitted" test1="state.test1" test2="state.test2" test3="state.test3" test4="state.test4"></check-form>
+        <carousel class="my-carousel" interval="-1">
+            <slide active="activeState[0]">
+                <div>
+                    <section class="container content-section text-center">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2">
+                                <h2>Acquaintance</h2>
+                                <form role="form" class="form-inline" name="order">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="name" class="form-control" id="name" placeholder="Enter your name" ng-model="state.test1" required ng-minlength="1">
+                                        <span ng-show="order.name.$error.required">Please enter something!</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="phone" class="form-control" id="phone" placeholder="Enter you phone" ng-model="state.test2" required ng-minlength="1">
+                                        <span ng-show="order.phone.$error.required">Please enter something!</span>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </slide>
+            <slide active="activeState[1]">
+                <div>
+                    <section id="order" class="container content-section text-center">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2">
+                                <h2>Let's find taxi for you</h2>
+                                <form role="form" class="form-inline" name="order">
+                                    <div class="form-group">
+                                        <label for="location">Location</label>
+                                        <input type="location" class="form-control" id="location" placeholder="Enter your location" ng-model="state.test3" required ng-minlength="1">
+                                        <span ng-show="order.location.$error.required">Please enter something!</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="car_class">Car class</label>
+                                        <input type="car_class" class="form-control" id="car_class" placeholder="Enter you car class" ng-model="state.test4" required ng-minlength="1">
+                                        <span ng-show="order.car_class.$error.required">Please enter something!</span>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </slide>
+        </carousel>
+        <div class="row" style="text-align: center">
+            <button class="btn btn-warning prev-button" ng-click="prevSlide()">Prev</button>
+            <button class="btn btn-warning next-button" ng-click="nextSlide($event)">Next</button>
+            <button class="btn my-button-hidden subbmit-button" ng-click="submit()">Submit</button>
+        </div>
+    </div>
+  </span>
+
+<!-- Modal -->
+<div class="modal fade" id="getCodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"> Taxi information </h4>
+            </div>
+            <div class="modal-body" id="getCode" style="overflow-x: scroll;">
+                //ajax success content here.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>taxi - for everyone :)</p>
+    </div>
+</footer>
+
+
+
+
+</body>
+
+</html>

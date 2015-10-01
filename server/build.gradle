@@ -1,0 +1,75 @@
+apply plugin: 'war'
+apply plugin: 'org.akhikhl.gretty'
+apply plugin: 'java'
+
+ext.springVersion='4.2.1.RELEASE'
+ext.springSecurityVersion = '3.2.3.RELEASE'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:3.0.1'
+
+	compile "org.springframework:spring-web:$springVersion"
+	compile "org.springframework:spring-webmvc:$springVersion"
+	compile project(":dao")
+
+	testCompile "junit:junit:4.11"
+	testCompile 'org.springframework:spring-test:4.2.1.RELEASE'
+
+	testCompile 'org.mockito:mockito-all:1.10.19'
+}
+
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.3'
+}
+
+sourceCompatibility = 1.7
+group = 'com.notsocomplex'
+version = '0.1'
+
+war {
+	manifest {
+		attributes 'Implementation-Title': 'Tomcat 8 with gradle', 'Implementation-Version': version
+	}
+}
+
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath 'org.akhikhl.gretty:gretty:+'
+	}
+}
+
+repositories {
+	jcenter()
+}
+
+gretty {
+	servletContainer = 'tomcat8'
+	httpPort = 8080
+	httpsEnabled = true
+	debugPort = 8000
+	debugSuspend = false
+	contextPath = '/'
+}
+
+
+sourceSets {
+	main {
+		java {
+			srcDirs 'src/main/java' // where the main code is
+		}
+	}
+
+	test {
+		java {
+			srcDir 'src/test' // tests for all the main code
+		}
+	}
+}
